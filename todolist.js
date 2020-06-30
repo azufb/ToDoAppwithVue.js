@@ -33,11 +33,9 @@
 let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
-        items: [
-           { title: '製作にチャレンジ', id: 1},
-           { title: 'a', id: 2}
-        ],// 入力値を格納する配列を用意する
-        newItem: '' // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
+        newItem: '' ,
+        items: []// 入力値を格納する配列を用意する
+                // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
     },
     methods: {
         addTodo: function() {
