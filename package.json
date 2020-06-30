@@ -1,0 +1,19 @@
+{
+  "name": "todoappwithvue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todolist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azufb/ToDoAppwithVue.js.git"
+  },
+  "author": "Azusa Okamoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azufb/ToDoAppwithVue.js/issues"
+  },
+  "homepage": "https://github.com/azufb/ToDoAppwithVue.js#readme"
+}
