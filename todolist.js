@@ -28,36 +28,15 @@
                 </ul>
             </div>
         </div>
+ */
 
 let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
         items: [
-            '製作にチャレンジ'
-        ], // 入力値を格納する配列を用意する
-        newItem: '' // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
+           { title: '製作にチャレンジ', id: 1},
+           { title: 'a', id: 2}
+        ]// 入力値を格納する配列を用意する
+        // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
     },
-    methods: { // methodsはオブジェクトを値にとることができる。
-         addItem: function() {
-             this.items.push({
-                 newItem
-        
-             });
-             this.newItem = ''; // 追加後は入力欄は空欄にする。
-        },
-    }
 })
- */
-
-
-
-let Vue = require('vue')
-    new Vue({
-        el: '#app',
-        data: {
-            items: [
-                {title: "製作", isChecked: true},
-                {title: "アイウエオ", isChecked: false}
-            ]
-        },
-    })
