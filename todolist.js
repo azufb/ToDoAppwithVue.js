@@ -28,7 +28,6 @@
                 </ul>
             </div>
         </div>
-*/
 
 let app = new Vue({
     el: '#app', // Vueを適用するid名
@@ -48,3 +47,17 @@ let app = new Vue({
         },
     }
 })
+ */
+
+
+
+let Vue = require('vue')
+    new Vue({
+        el: '#app',
+        data: {
+            items: [
+                {title: "製作", isChecked: true},
+                {title: "アイウエオ", isChecked: false}
+            ]
+        },
+    })
