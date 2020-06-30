@@ -11,20 +11,40 @@
 ↓
 完了したタスクをドラッグし、
 完了したエリアに追加することができる。
+
+<div　id="app">
+            <form>
+                <input type="text" placeholder="タスクを入力して下さい。" v-model="newItem">
+                <button type="button" v-on:click="add">追加</button>
+            </form>
+            <div>
+                <h4>ToDo</h4>
+                <ul>
+                    <li v-for = "item in items">
+                        <label></label>
+                        <button>削除</button>
+                    </li>　
+                    <!--オブジェクトtodoのitemプロパティをリストに表示させる。-->
+                </ul>
+            </div>
+        </div>
 */
 
 let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
-        newItem: '', // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
-        todos: [] // 入力値を格納する配列を用意する
+        items: [
+            '製作にチャレンジ'
+        ], // 入力値を格納する配列を用意する
+        newItem: '' // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
     },
     methods: { // methodsはオブジェクトを値にとることができる。
-        addItem: function(event) { // html上では、v-on:click=で関連付けされている。
-            let todo = {
-                item: this.newItem  // todoと言うオブジェクトがもつitemとは、入力されたnewItemである。
-            };
-            this.todos.push(todo); // 配列todosにtodoを末尾から追加
-        }
+         addItem: function() {
+             this.items.push({
+                 newItem
+        
+             });
+             this.newItem = ''; // 追加後は入力欄は空欄にする。
+        },
     }
 })
