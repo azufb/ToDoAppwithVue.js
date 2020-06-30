@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/azufb/ToDoAppwithVue.js/issues"
   },
-  "homepage": "https://github.com/azufb/ToDoAppwithVue.js#readme"
+  "homepage": "https://github.com/azufb/ToDoAppwithVue.js#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }

@@ -8,25 +8,19 @@
         <h1>ToDo管理</h1>
     </header>
     <body>
-        <div>
-            <form>
-                <input type="text" id="inputTodo" placeholder="タスクを入力して下さい。" v-model = "newItem">
-                <button type="button" id="addButton" v-on:click = "addItem">追加</button>
-            </form>
-            <div>
-                <h4>ToDo</h4>
-                <ul id="list">
-                    <li v-for = "todo in todos">
-                        <span>{{ todo.item }}</span>
-                        <button>削除</button>
-                    </li>　
-                    <!--オブジェクトtodoのitemプロパティをリストに表示させる。-->
-                </ul>
-            </div>
-            <div>
-                <h4>Finish!!</h4>
-            </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    </body>
-</html>
+        
+    <div id="app">
+        {{ message}}
+    </div>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+          el: '#app',
+          data: {
+            message: 'Hello,Vue.js!'
+          }
+        })
+      </script>
+      </body>
+
+    </html>
