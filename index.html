@@ -3,17 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <title>ToDo管理アプリ</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
     </head>
-    <header>
-        <h1>ToDo管理</h1>
-    </header>
     <body>
+    <h1>ToDo管理</h1>
     <div id="app">
+        <p>
+            <input type="text" v-model="newItem" v-on:keyup.enter="addTodo">
+            <button type="button" v-on:click="addTodo">add</button> 
+        </p>
         <ul>
             <li v-for="item in items">{{ item.title }}</li>
         </ul>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
     <script src="todolist.js"></script>
     </body>
 

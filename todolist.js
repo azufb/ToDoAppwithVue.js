@@ -36,7 +36,15 @@ let app = new Vue({
         items: [
            { title: '製作にチャレンジ', id: 1},
            { title: 'a', id: 2}
-        ]// 入力値を格納する配列を用意する
-        // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
+        ],// 入力値を格納する配列を用意する
+        newItem: '' // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
     },
+    methods: {
+        addTodo: function() {
+            this.items.push({
+                title: this.newItem
+            });
+            this.newItem = '';
+        },
+    }
 })
