@@ -8,15 +8,16 @@
     <body>
     <h1>ToDo管理</h1>
     <div id="app">
-        <p>
+        <form>
             <input type="text" v-model="newItem" v-on:keyup.enter="addTodo">
             <button type="button" v-on:click="addTodo">追加</button> 
-        </p>
+        </form>
         <ul>
             <li v-for="item in items">{{ item.title }}
                 <button type="button" v-on:click="deleteTodo">削除</button>
             </li>
         </ul>
+        <div>Finish!</div>
     </div>
     <script src="todolist.js"></script>
     </body>
