@@ -27,5 +27,8 @@ let app = new Vue({
             });
             this.newItem = '';
         },
+        deleteTodo: function(index) {
+            this.items.splice(index, 1); // index番目から1つ要素を削除する
+        }
     }
 })
