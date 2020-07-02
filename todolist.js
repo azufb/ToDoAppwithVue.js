@@ -18,7 +18,7 @@ let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
         newItem: '' ,
-        items: [{title: 'パンを買う'}],// 入力値を格納する配列を用意する
+        items: [],// 入力値を格納する配列を用意する
     },
     methods: {
         addTodo: function() {
@@ -34,6 +34,7 @@ let app = new Vue({
     }
 })
 
+/*
 let group1 = document.getElementById("dragText");
 let group2 = document.getElementById("finish");
 
@@ -59,3 +60,4 @@ group2.addEventListener("dragenter", function(event){
   group2.addEventListener("dragover", function(event){
     event.preventDefault();
   },false);
+  */
