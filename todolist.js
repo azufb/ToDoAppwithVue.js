@@ -18,7 +18,7 @@ let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
         newItem: '' ,
-        items: [],// 入力値を格納する配列を用意する
+        items: [{title: 'abc'}],// 入力値を格納する配列を用意する
         finishedItems: []        
     },
     methods: {
@@ -31,6 +31,12 @@ let app = new Vue({
         deleteTodo: function(item) {
             let index = this.items.indexOf(item);
             this.items.splice(index, 1); // 
+        },
+        beforeMove: function(event) {
+            return event.draggedContext.element.title !== 'abc';
+        },
+        onEnd: function(event) {
+            console.log(event);
         }
     }
 })
