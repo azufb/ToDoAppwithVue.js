@@ -12,33 +12,19 @@
     <div id="app">
         <div class="processing">
             <form>
-                <input type="text" v-model="newItem" v-on:keyup.enter="addTodo" class="input-form">
+                <input type="text" v-model="newItem" v-on:keyup.enter="addTodo" class="input-form" placeholder="タスクを入力して下さい。">
                 <button type="button" v-on:click="addTodo">追加</button> 
             </form>
-            <ul>
-                <draggable :list="items" 
-                            class="dragarea1"
-                            :move="beforeMove"
-                            @end="onEnd"
-                            :options="{group:'items'}">
+            <ul class="list">
+                <div draggable="true" id="dragText">
                     <li v-for="item in items">{{ item.title }}
                         <button type="button" v-on:click="deleteTodo(item)">削除</button>
                     </li>
-                </draggable>
+                </div>
             </ul>
         </div>
-        <div class="finish">Finish!
-            <ul>
-                <draggable :list="finishedItems" 
-                            class="dragarea2"
-                            :move="beforeMove"
-                            @end="onEnd"
-                            :options="{group:'tasks'}">
-                    <li v-for="item in finishedItems">{{ item.title }}
-                        <button type="button" v-on:click="deleteTodo(item)">削除</button>
-                    </li>
-                </draggable>
-            </ul>
+        <div id="finish" class="list">
+            
         </div>
     </div>
     <script src="todolist.js"></script>

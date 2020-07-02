@@ -18,8 +18,7 @@ let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
         newItem: '' ,
-        items: [{title: 'abc'}],// 入力値を格納する配列を用意する
-        finishedItems: [{title: 'def'}]   
+        items: [{title: 'パンを買う'}],// 入力値を格納する配列を用意する
     },
     methods: {
         addTodo: function() {
@@ -32,11 +31,29 @@ let app = new Vue({
             let index = this.items.indexOf(item);
             this.items.splice(index, 1); // 
         },
-        beforeMove: function(event) {
-            return event.draggedContext.element.title !== 'abc';
-        },
-        onEnd: function(event) {
-            console.log(event);
-        }
     }
 })
+
+let group1 = document.getElementById("dragText");
+let group2 = document.getElementById("finish");
+
+group1.addEventListener("dragstart", function(event) {
+    event.dataTransfer.setData("text/html", event.target.outerHTML);
+    event.stopPropagation();
+}, false);
+
+group2.addEventListener("drop", function(event) {
+    let dropData = event.dataTransfer.getData("text/html");
+
+    group2.innerHTML = dropData;
+
+    event.preventDefault();
+}, false);
+
+group2.addEventListener("dragenter", function(event){
+    event.preventDefault();
+  },false);
+  
+  group2.addEventListener("dragover", function(event){
+    event.preventDefault();
+  },false);
