@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.processing {
+    padding-right: 15px;
+}
+
+.input-form {
+    width: 300px;
+}
+
+.finish {
+    width: 300px;
+    
+}
+
+ul li {
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}

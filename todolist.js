@@ -19,7 +19,7 @@ let app = new Vue({
     data: {
         newItem: '' ,
         items: [{title: 'abc'}],// 入力値を格納する配列を用意する
-        finishedItems: []        
+        finishedItems: [{title: 'def'}]   
     },
     methods: {
         addTodo: function() {
