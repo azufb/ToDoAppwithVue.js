@@ -17,14 +17,11 @@
             </form>
             <ul class="list">
                 <div draggable="true" id="dragText">
-                    <li v-for="item in items">{{ item.title }}
+                    <li v-for="item in items"><input type="checkbox">{{ item.title }}
                         <button type="button" v-on:click="deleteTodo(item)">削除</button>
                     </li>
                 </div>
             </ul>
-        </div>
-        <div id="finish" class="list">
-          <h6>finish!</h6>  
         </div>
     </div>
     <script src="todolist.js"></script>
