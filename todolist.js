@@ -18,8 +18,8 @@ let app = new Vue({
     el: '#app', // Vueを適用するid名
     data: {
         newItem: '' ,
-        items: []// 入力値を格納する配列を用意する
-                // 入力した文字のデータを反映。html上では、v-model=で関連付けされている。
+        items: [],// 入力値を格納する配列を用意する
+        finishedItems: []        
     },
     methods: {
         addTodo: function() {
