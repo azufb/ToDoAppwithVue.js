@@ -28,7 +28,6 @@ h1 {
 .list li {
     width: 250px;
     list-style: none;
-    border: 1px solid black;
     border-radius: 10px;
     word-wrap: break-word;
 }
