@@ -48,6 +48,8 @@ group2.addEventListener("drop", function(event) {
     group2.innerHTML = dropData;
 
     event.preventDefault();
+
+    group1.textContent = "";
 }, false);
 
 group2.addEventListener("dragenter", function(event){
