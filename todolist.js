@@ -11,6 +11,7 @@
 ↓
 完了したタスクをドラッグし、
 完了したエリアに追加することができる。
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
 */
 
 let app = new Vue({
