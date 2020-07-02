@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>ToDo管理アプリ</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/15.0.0/vuedraggable.min.js"></script>
+
     </head>
     <body>
     <h1>ToDo管理</h1>
@@ -13,9 +15,11 @@
             <button type="button" v-on:click="addTodo">追加</button> 
         </form>
         <ul>
-            <li v-for="item in items">{{ item.title }}
-                <button type="button" v-on:click="deleteTodo(item)">削除</button>
-            </li>
+            <draggable :list="items" class="dragarea">
+                <li v-for="item in items">{{ item.title }}
+                    <button type="button" v-on:click="deleteTodo(item)">削除</button>
+                </li>
+            </draggable>
         </ul>
         <div>Finish!</div>
     </div>
