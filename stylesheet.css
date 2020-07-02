@@ -15,13 +15,20 @@ h1 {
     width: 300px;
 }
 
-.finish {
+#finish {
     width: 300px;
+    background-color: antiquewhite;
     
 }
 
-ul li {
+.list {
+    padding-left: 0px;
+}
+
+.list li {
+    width: 250px;
     list-style: none;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
+    word-wrap: break-word;
 }
