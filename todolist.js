@@ -19,11 +19,13 @@ let app = new Vue({
     data: {
         newItem: '' ,
         items: [],// 入力値を格納する配列を用意する
+        isChecked: false
     },
     methods: {
         addTodo: function() {
             this.items.push({
-                title: this.newItem
+                title: this.newItem,
+                isChecked: false
             });
             this.newItem = '';
         },
@@ -33,31 +35,3 @@ let app = new Vue({
         },
     }
 })
-
-/*
-let group1 = document.getElementById("dragText");
-let group2 = document.getElementById("finish");
-
-group1.addEventListener("dragstart", function(event) {
-    event.dataTransfer.setData("text/html", event.target.outerHTML);
-    event.stopPropagation();
-}, false);
-
-group2.addEventListener("drop", function(event) {
-    let dropData = event.dataTransfer.getData("text/html");
-
-    group2.innerHTML = dropData;
-
-    event.preventDefault();
-
-    group1.textContent = "";
-}, false);
-
-group2.addEventListener("dragenter", function(event){
-    event.preventDefault();
-  },false);
-  
-  group2.addEventListener("dragover", function(event){
-    event.preventDefault();
-  },false);
-  */

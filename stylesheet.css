@@ -21,11 +21,11 @@ h1 {
     
 }
 
-.list {
+ul {
     padding-left: 0px;
 }
 
-.list li {
+ul li {
     width: 250px;
     list-style: none;
     border-radius: 10px;
