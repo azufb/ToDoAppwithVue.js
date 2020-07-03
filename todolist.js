@@ -31,7 +31,7 @@ let app = new Vue({
         },
         deleteTodo: function(item) {
             let index = this.items.indexOf(item);
-            this.items.splice(index, 1); // 
+            this.items.splice(index, 1); 
         },
     }
 })
