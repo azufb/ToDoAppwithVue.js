@@ -3,31 +3,39 @@ h1 {
 }
 
 #app {
-    display: flex;
-    justify-content: center;
-}
-
-.processing {
-    padding-right: 15px;
+    text-align: center;
 }
 
 .input-form {
-    width: 300px;
+    width: 400px;
+    height: 30px;
+    font-size: 25px;
 }
 
-#finish {
-    width: 300px;
-    background-color: antiquewhite;
-    
+.button {
+    width: 50px;
+    height: 35px;
+    vertical-align: top;
+}
+
+.listCenter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 ul {
+    display: disc;
     padding-left: 0px;
 }
 
 ul li {
-    width: 250px;
+    width: 425px;
+    height: 35px;
     list-style: none;
+    border: 1px solid black;
     border-radius: 10px;
     word-wrap: break-word;
+    font-size: 25px;
+    text-align: left;
 }
