@@ -16,10 +16,12 @@ footer {
     bottom: 0;
 }
 
+/* メインタイトル */
 h1 {
     text-align: center;
 }
 
+/* ToDoアプリ */
 #app {
     text-align: center;
 }
@@ -65,3 +67,5 @@ ul li {
     height: 35px;
     vertical-align: top;
 }
+
+/* レスポンシブ対応 */
