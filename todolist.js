@@ -23,11 +23,15 @@ let app = new Vue({
     },
     methods: {
         addTodo: function() {
-            this.items.push({
-                title: this.newItem,
-                isChecked: false
-            });
-            this.newItem = '';
+            if (this.newItem === '') {
+                window.alert("タスクを入力して下さい！！");
+            } else {
+                this.items.push({
+                    title: this.newItem,
+                    isChecked: false
+                });
+                this.newItem = '';
+            }
         },
         deleteTodo: function(item) {
             let index = this.items.indexOf(item);
