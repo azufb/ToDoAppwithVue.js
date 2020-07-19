@@ -13,7 +13,7 @@
             <h1>ToDo管理</h1>
             <div id="app">
                 <form>
-                    <input type="text" v-model="newItem" v-on:keyup.enter="addTodo" class="input-form" placeholder="タスクを入力して下さい。">
+                    <input type="text" v-model="newItem" class="input-form" placeholder="タスクを入力して下さい。">
                     <button type="button" v-on:click="addTodo" id="addButton">追加</button> 
                 </form>
                 <div class="listCenter">
