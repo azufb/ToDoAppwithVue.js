@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <title>ToDo管理アプリ</title>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/15.0.0/vuedraggable.min.js"></script>
         <link rel="stylesheet" href="stylesheet.css">
         <meta name=”viewport” content=”width=device-width, initial-scale=1”>
     </head>
@@ -19,7 +18,7 @@
                 <div class="listCenter">
                     <ul>
                         <li v-for="item in items">
-                            <input type="checkbox" v-model="item.isChecked" v-on:change="deleteTodo(item)">{{ item.title }}
+                            <input type="checkbox" v-model="item.isChecked">{{ item.title }}
                             <button type="button" v-on:click="deleteTodo(item)" id="deleteButton">削除</button>
                         </li>
                     </ul>
@@ -29,7 +28,7 @@
                 <p>&copy;Azusa Okamoto.All Rights Reserved.</p>
             </footer>
         </div>
-    <script src="todolist.js"></script>
+        <script src="todolist.js"></script>
     </body>
 
     </html>
